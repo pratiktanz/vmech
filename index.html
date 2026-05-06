@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>V Mechanic — Brand Growth Strategy 2025-26</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Instrument+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;-webkit-font-smoothing:antialiased}
+:root{
+  --gold:#c9a84c;--gold-l:#e8c97a;--gold-d:#7a6230;--gold-bg:rgba(201,168,76,0.08);
+  --bg:#080808;--s1:#0f0f0f;--s2:#141414;--s3:#1a1a1a;
+  --border:#222;--border2:#2a2a2a;
+  --text:#ede9df;--muted:#666;--muted2:#999;
+  --red:#8b2f2f;
+}
+html{scroll-behavior:smooth}
+body{font-family:'Instrument Sans',sans-serif;background:var(--bg);color:var(--text);overflow-x:hidden;font-size:15px;line-height:1.6}
+
+/* NAV */
+nav{position:sticky;top:0;z-index:100;background:rgba(8,8,8,0.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:0 20px}
+.nav-inner{max-width:900px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:52px}
+.nav-logo{display:flex;align-items:center;gap:10px}
+.nav-badge{width:32px;height:32px;background:var(--gold);border-radius:7px;display:flex;align-items:center;justify-content:center;font-family:'Syne',sans-serif;font-weight:800;font-size:13px;color:#080808;flex-shrink:0}
+.nav-name{font-family:'Syne',sans-serif;font-weight:700;font-size:13px;color:var(--text)}
+.nav-links{display:flex;gap:0;overflow-x:auto;scrollbar-width:none}
+.nav-links::-webkit-scrollbar{display:none}
+.nav-link{font-size:11px;letter-spacing:1px;text-transform:uppercase;color:var(--muted);text-decoration:none;padding:6px 10px;border-radius:5px;white-space:nowrap;transition:color 0.2s}
+.nav-link:hover{color:var(--gold)}
+.nav-credit{font-size:10px;color:var(--gold-d);letter-spacing:1px;white-space:nowrap;display:none}
+@media(min-width:600px){.nav-credit{display:block}}
+
+/* LAYOUT */
+.wrapper{max-width:900px;margin:0 auto;padding:0 20px}
+
+/* HERO */
+.hero{padding:60px 20px 50px;max-width:900px;margin:0 auto;border-bottom:1px solid var(--border);position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;top:-100px;right:-100px;width:350px;height:350px;border-radius:50%;background:radial-gradient(circle,rgba(201,168,76,0.06),transparent 70%);pointer-events:none}
+.hero-eyebrow{display:flex;align-items:center;gap:10px;margin-bottom:20px}
+.hero-pill{font-size:10px;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold);border:1px solid var(--gold-d);padding:4px 12px;border-radius:20px}
+.hero-year{font-size:10px;color:var(--muted);letter-spacing:1px}
+h1{font-family:'Syne',sans-serif;font-size:clamp(34px,8vw,58px);font-weight:800;line-height:1.05;letter-spacing:-1.5px;margin-bottom:14px}
+h1 em{color:var(--gold);font-style:normal}
+.hero-sub{font-size:14px;color:var(--muted2);line-height:1.7;max-width:500px;margin-bottom:24px}
+.hero-meta{display:flex;flex-wrap:wrap;gap:8px}
+.hero-tag{font-size:10px;letter-spacing:1.5px;text-transform:uppercase;background:var(--gold-bg);color:var(--gold-d);padding:5px 12px;border-radius:4px}
+
+/* SECTIONS */
+section{border-bottom:1px solid var(--border);padding:44px 0}
+.section-label{font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:14px;font-family:'Syne',sans-serif}
+.section-title{font-family:'Syne',sans-serif;font-size:clamp(18px,4vw,24px);font-weight:700;margin-bottom:8px;letter-spacing:-0.3px}
+.section-desc{font-size:13px;color:var(--muted2);line-height:1.7;margin-bottom:28px;max-width:560px}
+
+/* KPI GRID */
+.kpi-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+@media(min-width:500px){.kpi-grid{grid-template-columns:repeat(4,1fr)}}
+.kpi{background:var(--s2);border:1px solid var(--border);border-radius:10px;padding:18px 14px}
+.kpi-val{font-family:'Syne',sans-serif;font-size:26px;font-weight:800;color:var(--gold);line-height:1}
+.kpi-label{font-size:11px;color:var(--muted);margin-top:6px;line-height:1.4}
+
+/* MODEL PILLARS */
+.pillars{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+@media(min-width:600px){.pillars{grid-template-columns:repeat(4,1fr)}}
+.pillar{background:var(--s2);border:1px solid var(--border);border-radius:10px;padding:16px;text-align:center}
+.pillar-icon{font-size:22px;margin-bottom:8px}
+.pillar-name{font-size:12px;font-weight:500}
+.pillar-desc{font-size:10px;color:var(--muted);margin-top:4px;line-height:1.4}
+
+/* PAIN GRID */
+.pain-grid{display:grid;gap:10px}
+@media(min-width:600px){.pain-grid{grid-template-columns:1fr 1fr}}
+.pain-card{background:var(--s2);border-left:3px solid var(--gold-d);padding:16px 18px}
+.pain-card.red{border-left-color:var(--red)}
+.pain-title{font-size:13px;font-weight:500;margin-bottom:4px}
+.pain-fix{font-size:11px;color:var(--muted);line-height:1.55}
+
+/* LEADS GRID */
+.leads-grid{display:grid;gap:10px}
+@media(min-width:480px){.leads-grid{grid-template-columns:1fr 1fr}}
+@media(min-width:720px){.leads-grid{grid-template-columns:repeat(3,1fr)}}
+.lead-card{background:var(--s2);border:1px solid var(--border);border-radius:10px;padding:16px}
+.lead-icon{width:30px;height:30px;border-radius:7px;background:var(--gold-bg);display:flex;align-items:center;justify-content:center;margin-bottom:10px;font-size:14px}
+.lead-title{font-size:12px;font-weight:500;margin-bottom:4px}
+.lead-desc{font-size:11px;color:var(--muted);line-height:1.5}
+
+/* PHASES */
+.phase-row{display:grid;gap:12px}
+@media(min-width:600px){.phase-row{grid-template-columns:repeat(3,1fr)}}
+.phase-card{background:var(--s2);border:1px solid var(--border);border-radius:12px;padding:20px;position:relative;overflow:hidden}
+.phase-card.active{border-color:var(--gold-d)}
+.phase-num{font-family:'Syne',sans-serif;font-size:52px;font-weight:800;color:var(--border);position:absolute;top:8px;right:14px;line-height:1}
+.phase-badge{font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:6px;font-family:'Syne',sans-serif}
+.phase-title{font-family:'Syne',sans-serif;font-size:14px;font-weight:700;margin-bottom:3px}
+.phase-period{font-size:11px;color:var(--muted);margin-bottom:12px}
+.phase-items{list-style:none}
+.phase-items li{font-size:11px;color:#aaa;padding:3px 0;display:flex;gap:7px;align-items:flex-start;line-height:1.4}
+.phase-items li::before{content:'';width:4px;height:4px;border-radius:50%;background:var(--gold);margin-top:5px;flex-shrink:0}
+
+/* BUDGET */
+.budget-grid{display:grid;gap:12px}
+@media(min-width:600px){.budget-grid{grid-template-columns:1fr 1fr}}
+.rev-card{background:var(--s2);border:1px solid var(--border);border-radius:12px;padding:22px}
+.rev-title{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-bottom:14px;font-family:'Syne',sans-serif}
+.budget-row{display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid var(--border);font-size:12px}
+.budget-row:last-child{border-bottom:none}
+.budget-label{color:#aaa}
+.budget-val{font-weight:500}
+.budget-val.gold{color:var(--gold)}
+.bar-row{display:flex;align-items:center;gap:10px;margin-bottom:9px}
+.bar-label{font-size:11px;color:var(--muted);width:80px;flex-shrink:0}
+.bar-track{flex:1;height:5px;background:var(--border2);border-radius:3px;overflow:hidden}
+.bar-fill{height:100%;border-radius:3px;background:var(--gold);transition:width 1s ease}
+.bar-pct{font-size:11px;color:var(--muted);width:28px;text-align:right}
+
+/* CITY */
+.city-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+@media(min-width:600px){.city-grid{grid-template-columns:repeat(3,1fr)}}
+.city-card{background:var(--s2);border:1px solid var(--border);border-radius:10px;padding:16px}
+.city-card.live{border-color:rgba(201,168,76,0.35)}
+.city-status{font-size:9px;letter-spacing:2px;text-transform:uppercase;padding:3px 8px;border-radius:3px;display:inline-block;margin-bottom:10px}
+.city-status.live{background:rgba(201,168,76,0.15);color:var(--gold)}
+.city-status.soon{background:rgba(255,255,255,0.05);color:var(--muted)}
+.city-name{font-family:'Syne',sans-serif;font-size:15px;font-weight:700;margin-bottom:2px}
+.city-area{font-size:11px;color:var(--muted)}
+.city-note{font-size:11px;color:var(--gold);margin-top:8px}
+
+/* MILESTONE */
+.milestone-list{list-style:none;position:relative;padding-left:30px}
+.milestone-list::before{content:'';position:absolute;left:11px;top:14px;bottom:14px;width:1px;background:var(--border2)}
+.milestone-item{display:flex;gap:14px;align-items:flex-start;margin-bottom:20px;position:relative}
+.m-dot{width:22px;height:22px;border-radius:50%;background:var(--s1);border:2px solid var(--border);display:flex;align-items:center;justify-content:center;flex-shrink:0;z-index:1;position:absolute;left:-30px;top:2px}
+.m-dot.done{background:var(--gold);border-color:var(--gold)}
+.m-dot.mid{border-color:var(--gold-d)}
+.m-month{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:2px;font-family:'Syne',sans-serif}
+.m-text{font-size:12px;color:#bbb;line-height:1.5}
+
+/* CEO SECTION */
+.ceo-grid{display:grid;gap:10px}
+@media(min-width:600px){.ceo-grid{grid-template-columns:1fr 1fr}}
+.ceo-card{background:var(--s2);border-left:3px solid var(--gold-d);padding:16px 18px}
+.ceo-title{font-size:13px;font-weight:500;margin-bottom:4px}
+.ceo-desc{font-size:11px;color:var(--muted);line-height:1.55}
+
+/* ============ OFFLINE SECTION ============ */
+.stat-row{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:24px}
+@media(min-width:500px){.stat-row{grid-template-columns:repeat(4,1fr)}}
+.stat{background:var(--s2);border:1px solid var(--border);border-radius:8px;padding:14px}
+.stat-val{font-family:'Syne',sans-serif;font-size:22px;font-weight:800;color:var(--gold)}
+.stat-lbl{font-size:10px;color:var(--muted);margin-top:4px;line-height:1.4}
+
+.brand-grid{display:grid;gap:10px}
+@media(min-width:480px){.brand-grid{grid-template-columns:1fr 1fr}}
+@media(min-width:720px){.brand-grid{grid-template-columns:repeat(3,1fr)}}
+.brand-card{background:var(--s2);border:1px solid var(--border);border-radius:10px;padding:16px}
+.b-tag{display:inline-block;font-size:9px;letter-spacing:1.5px;text-transform:uppercase;background:var(--gold-bg);color:var(--gold-d);padding:2px 7px;border-radius:3px;margin-bottom:8px}
+.b-title{font-size:12px;font-weight:500;margin-bottom:4px}
+.b-desc{font-size:11px;color:var(--muted);line-height:1.5}
+
+.table-wrap{background:var(--s2);border:1px solid var(--border);border-radius:10px;overflow:hidden;overflow-x:auto}
+table{width:100%;border-collapse:collapse;min-width:480px}
+th{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);padding:12px 14px;text-align:left;border-bottom:1px solid var(--border);font-weight:500;background:var(--s2)}
+td{font-size:11px;padding:11px 14px;border-bottom:1px solid #1a1a1a;vertical-align:top;line-height:1.45}
+tr:last-child td{border-bottom:none}
+td:first-child{color:#ccc;font-weight:500}
+td:nth-child(2){color:var(--muted)}
+td:last-child{color:var(--gold)}
+
+.activation-grid{display:grid;gap:10px}
+@media(min-width:480px){.activation-grid{grid-template-columns:1fr 1fr}}
+@media(min-width:720px){.activation-grid{grid-template-columns:repeat(3,1fr)}}
+.act-card{background:var(--s2);border:1px solid var(--border);border-radius:10px;padding:16px}
+.act-title{font-size:12px;font-weight:500;margin-bottom:4px}
+.act-desc{font-size:11px;color:var(--muted);line-height:1.5}
+
+.budget-cards{display:grid;gap:12px}
+@media(min-width:600px){.budget-cards{grid-template-columns:1fr 1fr}}
+.checklist{list-style:none}
+.checklist li{font-size:11px;color:#bbb;padding:6px 0;border-bottom:1px solid #1a1a1a;display:flex;gap:10px;align-items:flex-start;line-height:1.45}
+.checklist li:last-child{border-bottom:none}
+.ck-dot{width:5px;height:5px;border-radius:50%;background:var(--gold-d);margin-top:5px;flex-shrink:0}
+.ck-dot.gold{background:var(--gold)}
+
+.two-col-tl{display:grid;gap:12px}
+@media(min-width:600px){.two-col-tl{grid-template-columns:1fr 1fr}}
+.tl-block{background:var(--s2);border:1px solid var(--border);border-radius:10px;padding:18px}
+.offline-tl{list-style:none;position:relative;padding-left:26px}
+.offline-tl::before{content:'';position:absolute;left:8px;top:12px;bottom:12px;width:1px;background:var(--border2)}
+.ot-item{position:relative;margin-bottom:18px}
+.ot-dot{position:absolute;left:-22px;top:2px;width:14px;height:14px;border-radius:50%;background:var(--s1);border:1.5px solid var(--border2)}
+.ot-dot.on{background:var(--gold);border-color:var(--gold)}
+.ot-dot.mid{border-color:var(--gold-d)}
+.ot-month{font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold);margin-bottom:2px;font-family:'Syne',sans-serif}
+.ot-text{font-size:11px;color:#aaa;line-height:1.5}
+
+/* FOOTER */
+footer{padding:30px 20px;background:var(--s1);border-top:1px solid var(--border);text-align:center}
+.footer-brand{font-family:'Syne',sans-serif;font-size:13px;font-weight:700;color:var(--gold);margin-bottom:4px}
+.footer-credit{font-size:11px;color:var(--muted)}
+
+/* SECTION DIVIDER label */
+.chapter-divider{background:var(--s1);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:16px 20px;display:flex;align-items:center;gap:12px}
+.chapter-divider .max{max-width:900px;margin:0 auto;width:100%;display:flex;align-items:center;gap:12px}
+.ch-num{font-family:'Syne',sans-serif;font-size:11px;font-weight:700;color:var(--gold-d)}
+.ch-title{font-family:'Syne',sans-serif;font-size:12px;font-weight:700;color:var(--text)}
+.ch-line{flex:1;height:1px;background:var(--border2)}
+
+/* SCROLL REVEAL */
+.reveal{opacity:0;transform:translateY(16px);transition:opacity 0.5s ease,transform 0.5s ease}
+.reveal.visible{opacity:1;transform:none}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <div class="nav-logo">
+      <div class="nav-badge">VM</div>
+      <div class="nav-name">V Mechanic</div>
+    </div>
+    <div class="nav-links">
+      <a class="nav-link" href="#model">Model</a>
+      <a class="nav-link" href="#pain">Gaps</a>
+      <a class="nav-link" href="#leads">Leads</a>
+      <a class="nav-link" href="#phases">Phases</a>
+      <a class="nav-link" href="#cities">Cities</a>
+      <a class="nav-link" href="#offline">Offline</a>
+    </div>
+    <div class="nav-credit">by Pratik Bagale</div>
+  </div>
+</nav>
+
+<div class="hero reveal">
+  <div class="hero-eyebrow">
+    <span class="hero-pill">Brand Growth Strategy</span>
+    <span class="hero-year">2025 — 26</span>
+  </div>
+  <h1>V Mechanic<br><em>Growth Blueprint</em></h1>
+  <p class="hero-sub">A full-scale brand, digital, and expansion strategy to take V Mechanic from 3 workshop partnerships in Pune to a dominant multi-city automotive service network across India.</p>
+  <div class="hero-meta">
+    <span class="hero-tag">Strategy by Pratik Bagale</span>
+    <span class="hero-tag">Confidential</span>
+    <span class="hero-tag">Year 1 Plan</span>
+  </div>
+</div>
+
+<!-- CHAPTER 1 -->
+<div class="chapter-divider"><div class="max"><span class="ch-num">01</span><div class="ch-line"></div><span class="ch-title">Digital Strategy</span></div></div>
+
+<div class="wrapper">
+
+<section id="model" class="reveal">
+  <div class="section-label">Current State</div>
+  <div class="section-title">Where V Mechanic Stands Today</div>
+  <div class="section-desc">Three active workshop partnerships in Pune. Lead generation through Google My Business and paid calls. No website, no social media, no owned customer base yet.</div>
+  <div class="kpi-grid">
+    <div class="kpi"><div class="kpi-val">3</div><div class="kpi-label">Active workshop partnerships in Pune</div></div>
+    <div class="kpi"><div class="kpi-val">GMB</div><div class="kpi-label">Only digital presence currently active</div></div>
+    <div class="kpi"><div class="kpi-val">₹20K</div><div class="kpi-label">Monthly marketing budget incl. ads</div></div>
+    <div class="kpi"><div class="kpi-val">10+</div><div class="kpi-label">Target workshop partnerships in Year 1</div></div>
+  </div>
+</section>
+
+<section class="reveal">
+  <div class="section-label">The Model</div>
+  <div class="section-title">How V Mechanic Actually Works</div>
+  <div class="section-desc">V Mechanic is not a workshop owner. It is a network aggregator, a digital front-end for trusted local workshops. The brand brings customers in. The workshop delivers the service.</div>
+  <div class="pillars">
+    <div class="pillar"><div class="pillar-icon">📲</div><div class="pillar-name">Digital Acquisition</div><div class="pillar-desc">Leads via ads, GMB, and website</div></div>
+    <div class="pillar"><div class="pillar-icon">🔧</div><div class="pillar-name">Workshop Partners</div><div class="pillar-desc">Local workshops serve under the board</div></div>
+    <div class="pillar"><div class="pillar-icon">💰</div><div class="pillar-name">Revenue Share</div><div class="pillar-desc">V Mechanic earns % of every job</div></div>
+    <div class="pillar"><div class="pillar-icon">📈</div><div class="pillar-name">Brand Equity</div><div class="pillar-desc">Trust at brand level, not workshop level</div></div>
+  </div>
+</section>
+
+<section id="pain" class="reveal">
+  <div class="section-label">Pain Points</div>
+  <div class="section-title">Critical Problems to Fix First</div>
+  <div class="section-desc">These gaps are actively losing leads and delaying growth. Each one addressed compounds the others.</div>
+  <div class="pain-grid">
+    <div class="pain-card red"><div class="pain-title">No owned digital asset</div><div class="pain-fix">GMB alone is rented land. If Google changes algorithm or suspends the listing, all leads vanish overnight. A website is the first priority.</div></div>
+    <div class="pain-card red"><div class="pain-title">No customer database</div><div class="pain-fix">Every lead that converts disappears into the workshop's hands. No CRM, no repeat contact, no retention. Lifetime value is abandoned at step one.</div></div>
+    <div class="pain-card"><div class="pain-title">Zero brand trust signals</div><div class="pain-fix">No reviews under the V Mechanic name, no before-after content, no visible team. Customers book on faith. Trust infrastructure needs deliberate building.</div></div>
+    <div class="pain-card"><div class="pain-title">No workshop onboarding system</div><div class="pain-fix">Expansion requires a repeatable process to bring workshops under the brand. Without this, growth beyond 5 workshops becomes chaotic and inconsistent.</div></div>
+    <div class="pain-card"><div class="pain-title">Ad spend with no funnel</div><div class="pain-fix">Running ads without a landing page or conversion flow is spending money to heat the room with the window open. Every rupee needs a destination to land on.</div></div>
+    <div class="pain-card"><div class="pain-title">No social proof loop</div><div class="pain-fix">Happy customers are not being captured as testimonials, reviews, or referral sources. This is the cheapest form of advertising and it is completely untapped.</div></div>
+  </div>
+</section>
+
+<section id="leads" class="reveal">
+  <div class="section-label">Lead Generation</div>
+  <div class="section-title">How to Attract More Customers</div>
+  <div class="section-desc">A layered approach: owned channels for long-term equity, paid channels for immediate volume, community channels for trust at scale.</div>
+  <div class="leads-grid">
+    <div class="lead-card"><div class="lead-icon">🌐</div><div class="lead-title">Website with service booking</div><div class="lead-desc">A clean, fast website with a booking form converts cold traffic into scheduled leads. Highest ROI asset to build first.</div></div>
+    <div class="lead-card"><div class="lead-icon">📍</div><div class="lead-title">GMB expansion by area</div><div class="lead-desc">Separate GMB listings for Aundh, Baner, and Hadapsar means 3x local search visibility immediately.</div></div>
+    <div class="lead-card"><div class="lead-icon">🎯</div><div class="lead-title">Hyperlocal Google Ads</div><div class="lead-desc">Target intent keywords like "car service near me Baner." These users are ready to book, not just browsing.</div></div>
+    <div class="lead-card"><div class="lead-icon">📱</div><div class="lead-title">Instagram and YouTube Shorts</div><div class="lead-desc">Before-after repair videos and mechanic tips. One viral video can deliver 100+ leads at zero cost.</div></div>
+    <div class="lead-card"><div class="lead-icon">🤝</div><div class="lead-title">Referral and loyalty program</div><div class="lead-desc">Offer existing customers a discount for every referral. One satisfied customer is a network of potential leads.</div></div>
+    <div class="lead-card"><div class="lead-icon">🏢</div><div class="lead-title">Corporate fleet tie-ups</div><div class="lead-desc">One B2B contract equals the volume of 30 individual customers per month. High effort, recurring reward.</div></div>
+    <div class="lead-card"><div class="lead-icon">💬</div><div class="lead-title">WhatsApp business automation</div><div class="lead-desc">Automated booking confirmations, service reminders, and review requests. Brand stays present between intervals.</div></div>
+    <div class="lead-card"><div class="lead-icon">⭐</div><div class="lead-title">Review generation system</div><div class="lead-desc">Every completed job triggers a review prompt. 50 five-star reviews under V Mechanic is a permanent competitive edge.</div></div>
+    <div class="lead-card"><div class="lead-icon">🧩</div><div class="lead-title">Housing society tie-ups</div><div class="lead-desc">One society agreement in Baner could mean 80 to 120 potential car owners in a single partnership.</div></div>
+  </div>
+</section>
+
+<section id="phases" class="reveal">
+  <div class="section-label">Execution Phases</div>
+  <div class="section-title">Three Phases to 10 Workshops</div>
+  <div class="section-desc">Each phase builds on the last. Infrastructure first, then scale, then national expansion. No step is skipped.</div>
+  <div class="phase-row">
+    <div class="phase-card active">
+      <div class="phase-num">01</div>
+      <div class="phase-badge">Now Active</div>
+      <div class="phase-title">Foundation and Visibility</div>
+      <div class="phase-period">Month 1 to Month 3</div>
+      <ul class="phase-items">
+        <li>Build website with booking flow</li>
+        <li>Set up WhatsApp Business and CRM</li>
+        <li>Optimize all 3 GMB listings fully</li>
+        <li>Launch Instagram with 3x weekly posts</li>
+        <li>Run hyperlocal Google Ads</li>
+        <li>Design brand board and invoice kit</li>
+        <li>Collect first 50 Google reviews</li>
+        <li>Onboard 2 more Pune workshops</li>
+      </ul>
+    </div>
+    <div class="phase-card">
+      <div class="phase-num">02</div>
+      <div class="phase-badge">Scale Phase</div>
+      <div class="phase-title">Dominate Pune, Prepare Expansion</div>
+      <div class="phase-period">Month 4 to Month 8</div>
+      <ul class="phase-items">
+        <li>Launch corporate fleet outreach</li>
+        <li>Build workshop onboarding SOP</li>
+        <li>Start customer referral program</li>
+        <li>Expand to 8 to 10 workshops in Pune</li>
+        <li>Begin YouTube Shorts with repair content</li>
+        <li>Scout Panjim market and partners</li>
+        <li>Scale ads based on CAC data</li>
+        <li>Build V Mechanic partner portal</li>
+      </ul>
+    </div>
+    <div class="phase-card">
+      <div class="phase-num">03</div>
+      <div class="phase-badge">National Push</div>
+      <div class="phase-title">Multi-City Brand Launch</div>
+      <div class="phase-period">Month 9 to Month 12</div>
+      <ul class="phase-items">
+        <li>Launch Panjim with 2 to 3 partners</li>
+        <li>Enter Mysore and Mangalore</li>
+        <li>PR and press: startup and auto media</li>
+        <li>Explore franchise or licensing model</li>
+        <li>Build city-specific landing pages</li>
+        <li>Target 1,000+ monthly leads</li>
+        <li>Evaluate investor conversations</li>
+        <li>Formalise all revenue share agreements</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="reveal">
+  <div class="section-label">Budget Allocation</div>
+  <div class="section-title">Making ₹20,000 Work Hard</div>
+  <div class="section-desc">Every rupee has a job. The ₹15,000 retainer plus ₹5,000 ad spend allocated with precision to maximise lead volume and brand equity simultaneously.</div>
+  <div class="budget-grid">
+    <div class="rev-card">
+      <div class="rev-title">Monthly retainer usage (₹15,000)</div>
+      <div class="budget-row"><span class="budget-label">Website dev and maintenance</span><span class="budget-val gold">₹5,000</span></div>
+      <div class="budget-row"><span class="budget-label">Social media content creation</span><span class="budget-val">₹4,000</span></div>
+      <div class="budget-row"><span class="budget-label">GMB management and SEO</span><span class="budget-val">₹3,000</span></div>
+      <div class="budget-row"><span class="budget-label">WhatsApp and CRM setup</span><span class="budget-val">₹2,000</span></div>
+      <div class="budget-row"><span class="budget-label">Reporting and strategy</span><span class="budget-val">₹1,000</span></div>
+    </div>
+    <div class="rev-card">
+      <div class="rev-title">Ad spend allocation (₹5,000 base)</div>
+      <div class="bar-row"><span class="bar-label">Google Search</span><div class="bar-track"><div class="bar-fill" style="width:60%"></div></div><span class="bar-pct">60%</span></div>
+      <div class="bar-row"><span class="bar-label">Google Maps</span><div class="bar-track"><div class="bar-fill" style="width:20%"></div></div><span class="bar-pct">20%</span></div>
+      <div class="bar-row"><span class="bar-label">Meta / Insta</span><div class="bar-track"><div class="bar-fill" style="width:15%"></div></div><span class="bar-pct">15%</span></div>
+      <div class="bar-row"><span class="bar-label">Testing</span><div class="bar-track"><div class="bar-fill" style="width:5%"></div></div><span class="bar-pct">5%</span></div>
+      <p style="font-size:11px;color:var(--muted);margin-top:14px;line-height:1.6">Scale ad spend to ₹15,000 to ₹20,000 per month within 6 months as CAC data is confirmed and lead volume grows.</p>
+    </div>
+  </div>
+</section>
+
+<section id="cities" class="reveal">
+  <div class="section-label">Expansion Map</div>
+  <div class="section-title">City-by-City Rollout</div>
+  <div class="section-desc">Pune is the proof of concept. Each new city follows the same playbook: scout partners, install brand, run local ads, build GMB, scale.</div>
+  <div class="city-grid">
+    <div class="city-card live"><span class="city-status live">Live</span><div class="city-name">Pune</div><div class="city-area">Aundh, Baner, Hadapsar</div><div class="city-note">3 active / target 8 to 10</div></div>
+    <div class="city-card"><span class="city-status soon">Q3 2025</span><div class="city-name">Panjim</div><div class="city-area">North Goa</div><div class="city-note">Scouting 2 to 3 partners</div></div>
+    <div class="city-card"><span class="city-status soon">Q4 2025</span><div class="city-name">Mysore</div><div class="city-area">Karnataka</div><div class="city-note">High car ownership density</div></div>
+    <div class="city-card"><span class="city-status soon">Q4 2025</span><div class="city-name">Mangalore</div><div class="city-area">Coastal Karnataka</div><div class="city-note">Low competition, strong SME</div></div>
+    <div class="city-card"><span class="city-status soon">Year 2</span><div class="city-name">Bengaluru</div><div class="city-area">Tier 1 Target</div><div class="city-note">High volume, digital-first</div></div>
+    <div class="city-card"><span class="city-status soon">Year 2</span><div class="city-name">Hyderabad</div><div class="city-area">Tier 1 Target</div><div class="city-note">Dense auto market</div></div>
+  </div>
+</section>
+
+<section class="reveal">
+  <div class="section-label">12-Month Milestones</div>
+  <div class="section-title">The Roadmap in Sequence</div>
+  <div class="section-desc">Clear, time-bound targets. Each milestone is a checkpoint, not just a goal.</div>
+  <ul class="milestone-list">
+    <li class="milestone-item"><div class="m-dot done"></div><div><div class="m-month">Month 1</div><div class="m-text">Website live with booking form. All 3 GMB listings fully optimized. Instagram account created with first 9 posts published.</div></div></li>
+    <li class="milestone-item"><div class="m-dot done"></div><div><div class="m-month">Month 2</div><div class="m-text">Google Ads campaign running. First 20 reviews collected on GMB. WhatsApp Business automation live for booking confirmations.</div></div></li>
+    <li class="milestone-item"><div class="m-dot mid"></div><div><div class="m-month">Month 3</div><div class="m-text">5th workshop onboarded in Pune. First corporate fleet inquiry generated. V Mechanic board installed at all 5 workshops.</div></div></li>
+    <li class="milestone-item"><div class="m-dot"></div><div><div class="m-month">Month 5</div><div class="m-text">50+ reviews on Google. 1,000 Instagram followers. Referral program launched. Monthly leads tracking at 150+ enquiries.</div></div></li>
+    <li class="milestone-item"><div class="m-dot"></div><div><div class="m-month">Month 7</div><div class="m-text">8 workshops active in Pune. Panjim partners identified and agreements signed. YouTube channel live with first 10 videos.</div></div></li>
+    <li class="milestone-item"><div class="m-dot"></div><div><div class="m-month">Month 9</div><div class="m-text">Panjim launch. Mysore partner scouting complete. Pune generating 300+ leads per month. Press coverage in at least 2 outlets.</div></div></li>
+    <li class="milestone-item"><div class="m-dot"></div><div><div class="m-month">Month 12</div><div class="m-text">10+ workshops across 3 cities. V Mechanic recognised as a brand in Pune. Investor deck or franchise model ready for Year 2.</div></div></li>
+  </ul>
+</section>
+
+<section class="reveal" style="border-bottom:none">
+  <div class="section-label">CEO Perspective</div>
+  <div class="section-title">What Rajesh Must Protect at All Costs</div>
+  <div class="section-desc">Beyond marketing, there are decisions at the founder level that will determine whether V Mechanic becomes a brand or stays a middleman.</div>
+  <div class="ceo-grid">
+    <div class="ceo-card"><div class="ceo-title">Protect the brand, not the workshop</div><div class="ceo-desc">Every customer must associate their experience with V Mechanic, not the individual workshop. Rajesh must own the customer relationship end to end.</div></div>
+    <div class="ceo-card"><div class="ceo-title">Data is the real business</div><div class="ceo-desc">The customer list, vehicle history, and service data is worth more than any workshop partnership. Build the CRM from day one and guard it.</div></div>
+    <div class="ceo-card"><div class="ceo-title">Formalize every partnership</div><div class="ceo-desc">Every workshop under the V Mechanic board needs a signed agreement. Revenue share, quality standards, and exit terms must be documented.</div></div>
+    <div class="ceo-card"><div class="ceo-title">Quality control is brand control</div><div class="ceo-desc">One bad workshop experience damages the V Mechanic name citywide. Monthly check-ins and review monitoring must be built into the operating rhythm.</div></div>
+  </div>
+</section>
+
+</div><!-- /wrapper -->
+
+<!-- CHAPTER 2 -->
+<div class="chapter-divider"><div class="max"><span class="ch-num">02</span><div class="ch-line"></div><span class="ch-title">Offline and Integrated Strategy</span></div></div>
+
+<div class="wrapper">
+
+<section id="offline" class="reveal">
+  <div class="section-label">Why Offline Matters</div>
+  <div class="section-title">The gap that digital alone cannot close</div>
+  <div class="section-desc">Car service is a high-trust category. People do not hand over a vehicle worth three to twenty lakhs to a name they only saw on a screen. Offline presence builds the credibility that converts digital curiosity into a booked appointment.</div>
+  <div class="stat-row">
+    <div class="stat"><div class="stat-val">78%</div><div class="stat-lbl">Indians verify a local service offline before first booking</div></div>
+    <div class="stat"><div class="stat-val">3x</div><div class="stat-lbl">Higher repeat rate when customer visits a branded location</div></div>
+    <div class="stat"><div class="stat-val">60%</div><div class="stat-lbl">Word-of-mouth referrals still begin from in-person interactions</div></div>
+    <div class="stat"><div class="stat-val">0</div><div class="stat-lbl">Current V Mechanic brand visibility at any workshop today</div></div>
+  </div>
+</section>
+
+<section class="reveal">
+  <div class="section-label">Workshop Branding</div>
+  <div class="section-title">Make the workshop speak the brand</div>
+  <div class="section-desc">Every workshop under V Mechanic must look and feel like one unified network. Brand consistency at the physical level is the foundation of trust.</div>
+  <div class="brand-grid">
+    <div class="brand-card"><div class="b-tag">Mandatory</div><div class="b-title">Branded board and fascia</div><div class="b-desc">A standardised V Mechanic signboard at every partner workshop. Consistent colours, logo size, and placement. Every drive-by is a free impression.</div></div>
+    <div class="brand-card"><div class="b-tag">Mandatory</div><div class="b-title">Branded receipt and invoice</div><div class="b-desc">Every job carries a V Mechanic invoice with logo, contact number, WhatsApp link, and a Google review QR code. The invoice is a marketing asset, not just a bill.</div></div>
+    <div class="brand-card"><div class="b-tag">Mandatory</div><div class="b-title">Workshop staff ID cards</div><div class="b-desc">Mechanics wear a V Mechanic ID badge. It signals a professional network, not a roadside garage. Costs under ₹50 per card and raises perceived quality significantly.</div></div>
+    <div class="brand-card"><div class="b-tag">Phase 2</div><div class="b-title">Service bay banners</div><div class="b-desc">Inside the workshop, banners listing services, pricing, and a QR code for booking. Customers waiting for their car will read these. Upsell happens passively.</div></div>
+    <div class="brand-card"><div class="b-tag">Phase 2</div><div class="b-title">Customer waiting area kit</div><div class="b-desc">Branded shelf with V Mechanic brochures, a QR standee for WhatsApp, and printed service packages. Converts wait time into brand engagement.</div></div>
+    <div class="brand-card"><div class="b-tag">Phase 2</div><div class="b-title">Vehicle job card with branding</div><div class="b-desc">The job card clipped to the windshield during service carries the V Mechanic logo. Workshop owners cannot bypass the brand when it is on every physical document.</div></div>
+  </div>
+</section>
+
+<section class="reveal">
+  <div class="section-label">On-Ground Activations</div>
+  <div class="section-title">Go where the customers already are</div>
+  <div class="section-desc">The most efficient offline lead generation happens in spaces where car owners already congregate. Low-cost, high-trust touchpoints that feed the digital pipeline.</div>
+  <div class="activation-grid">
+    <div class="act-card"><div class="act-title">Free car health camps</div><div class="act-desc">Free 15-minute vehicle checks at housing societies and office parking lots. Collect name and number on a V Mechanic form. Every participant is a warm lead.</div></div>
+    <div class="act-card"><div class="act-title">Parking lot flyer drops</div><div class="act-desc">Target malls, IT parks, and residential complexes in Aundh, Baner, Hadapsar. Timing matters: drop on Friday afternoon when people plan weekend tasks.</div></div>
+    <div class="act-card"><div class="act-title">Festival service offers</div><div class="act-desc">Before Diwali, Gudi Padwa, and summer, run workshop offers on AC service or full car check-up. People think about maintenance during festivals. Be there first.</div></div>
+    <div class="act-card"><div class="act-title">Society and RWA notice boards</div><div class="act-desc">A printed A4 V Mechanic card with WhatsApp QR at gated community notice boards costs nothing to produce and reaches every resident daily.</div></div>
+    <div class="act-card"><div class="act-title">Auto parts shop tie-ups</div><div class="act-desc">Local spare parts shops already have walk-in car owners. Place a V Mechanic standee at their counter with a referral arrangement: a small cut per converted lead.</div></div>
+    <div class="act-card"><div class="act-title">Petrol pump partnerships</div><div class="act-desc">Pune petrol pumps see hundreds of car owners daily. A standee near the payment counter with a card holder is a 30-second touchpoint for every customer.</div></div>
+  </div>
+</section>
+
+<section class="reveal">
+  <div class="section-label">B2B and Institutional Offline</div>
+  <div class="section-title">Corporate and fleet partnerships</div>
+  <div class="section-desc">One signed fleet agreement replaces the effort of acquiring 30 individual customers. High effort to open, but recurring, predictable, and high volume once active.</div>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Target type</th><th>Approach</th><th>Volume</th></tr></thead>
+      <tbody>
+        <tr><td>IT companies (Hinjewadi, Baner)</td><td>Walk into HR or admin with a V Mechanic corporate deck. Offer employee discount card and fleet contract.</td><td>20 to 80 cars</td></tr>
+        <tr><td>Cab drivers (Ola, Uber)</td><td>Visit driver pickup hubs and charge points. Offer monthly service plan at flat rate. Drivers hate downtime.</td><td>5 to 15 jobs/year</td></tr>
+        <tr><td>Delivery fleet (Swiggy, Zomato, Zepto)</td><td>Contact regional operations managers. Offer bulk servicing for 2-wheelers and vans. These fleets run daily.</td><td>50 to 200 vehicles</td></tr>
+        <tr><td>Construction companies</td><td>Field staff use company vehicles constantly. One admin deal covers the whole fleet.</td><td>10 to 40 vehicles</td></tr>
+        <tr><td>School transport operators</td><td>Offer priority Saturday slots for fleet servicing with a branded V Mechanic inspection certificate.</td><td>5 to 25 vehicles</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="reveal">
+  <div class="section-label">Community Presence</div>
+  <div class="section-title">Build the brand in local conversations</div>
+  <div class="section-desc">In Tier 1 and Tier 2 Indian cities, community-level reputation travels faster than any ad. Being known in Aundh or Baner is worth more than 10,000 Instagram impressions.</div>
+  <div class="activation-grid">
+    <div class="act-card"><div class="act-title">Local car owner WhatsApp groups</div><div class="act-desc">Most localities have active WhatsApp groups. Share helpful tips, not ads. Answer car questions. Become the trusted name before anyone asks for a recommendation.</div></div>
+    <div class="act-card"><div class="act-title">Vernacular newspaper and cable ads</div><div class="act-desc">Sakal and Maharashtra Times reach middle-income car owners in Pune at very low cost. A small classified ad during summer or monsoon generates consistent offline leads.</div></div>
+    <div class="act-card"><div class="act-title">Auto expos and local events</div><div class="act-desc">A V Mechanic stall with a free tyre pressure check brings foot traffic and collects leads. The brand becomes associated with expertise, not just a service number.</div></div>
+    <div class="act-card"><div class="act-title">Hyperlocal influencer tie-ups</div><div class="act-desc">Pune micro-influencers with 5,000 to 50,000 local followers. A free service in exchange for a reel or story reaches the exact audience V Mechanic needs.</div></div>
+    <div class="act-card"><div class="act-title">Mechanic referral network</div><div class="act-desc">Roadside mechanics and tyre shops outside the network often encounter jobs they cannot handle. A ₹100 to ₹200 referral fee per converted lead activates this channel.</div></div>
+    <div class="act-card"><div class="act-title">School gate pamphlet drops</div><div class="act-desc">Parents at school gates in Aundh and Baner are a captive audience. A pamphlet drop at dismissal time reaches 200 to 400 car owners in under 30 minutes.</div></div>
+  </div>
+</section>
+
+<section class="reveal">
+  <div class="section-label">Integrated Playbook</div>
+  <div class="section-title">How offline and online work as one system</div>
+  <div class="section-desc">Neither channel works at its best in isolation. Every offline touchpoint feeds the digital pipeline. Every digital action builds offline credibility.</div>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Offline action</th><th>Digital follow-through</th><th>Outcome</th></tr></thead>
+      <tbody>
+        <tr><td>Free car health camp</td><td>WhatsApp broadcast to all attendees with a discount code for first booking</td><td>Warm leads converted digitally within 48 hours</td></tr>
+        <tr><td>Customer picks up car</td><td>Automated WhatsApp asking for a Google review with direct link</td><td>GMB rating grows passively with every job</td></tr>
+        <tr><td>Petrol pump standee call</td><td>Customer added to CRM, WhatsApp reminder sent before next service</td><td>Offline lead becomes retained digital customer</td></tr>
+        <tr><td>Society notice board QR scan</td><td>QR opens WhatsApp with pre-filled message and booking link</td><td>Frictionless booking from a passive offline placement</td></tr>
+        <tr><td>Fleet deal closed in person</td><td>Fleet account in CRM, automated schedule, monthly email reports</td><td>B2B account managed digitally after offline handshake</td></tr>
+        <tr><td>Mechanic gives branded invoice</td><td>QR on invoice gets Google review, WhatsApp contact, Instagram follow</td><td>One job creates three digital actions at zero extra cost</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="reveal">
+  <div class="section-label">Offline Budget Plan</div>
+  <div class="section-title">Physical execution costs and priorities</div>
+  <div class="section-desc">Offline does not require large spend. The biggest returns come from branded materials and personal outreach. Both are low cost and high frequency.</div>
+  <div class="budget-cards">
+    <div class="rev-card">
+      <div class="rev-title">One-time brand setup costs</div>
+      <ul class="checklist">
+        <li><span class="ck-dot"></span>Workshop signboards x3 (flex with frame): ₹3,000 to ₹5,000</li>
+        <li><span class="ck-dot"></span>Branded invoice pad printing 500 pcs: ₹800</li>
+        <li><span class="ck-dot"></span>Staff ID cards x10: ₹500</li>
+        <li><span class="ck-dot"></span>Service bay banners x3: ₹1,500</li>
+        <li><span class="ck-dot"></span>QR code standees x5: ₹1,200</li>
+        <li><span class="ck-dot"></span>Brochure printing 1,000 pcs: ₹1,500</li>
+        <li><span class="ck-dot"></span>Customer waiting area board: ₹800</li>
+        <li><span class="ck-dot gold"></span>Total one-time: approx ₹10,000 to ₹11,300</li>
+      </ul>
+    </div>
+    <div class="rev-card">
+      <div class="rev-title">Monthly recurring offline costs</div>
+      <ul class="checklist">
+        <li><span class="ck-dot"></span>Flyer and pamphlet distribution 2 rounds: ₹1,000</li>
+        <li><span class="ck-dot"></span>Car health camp consumables: ₹500</li>
+        <li><span class="ck-dot"></span>Standee and material replenishment: ₹300</li>
+        <li><span class="ck-dot"></span>Local newspaper classified 2 insertions: ₹1,500</li>
+        <li><span class="ck-dot"></span>Mechanic and shop referral payouts: variable</li>
+        <li><span class="ck-dot"></span>B2B outreach travel and meetings: ₹500</li>
+        <li><span class="ck-dot gold"></span>Total monthly offline: approx ₹3,500 to ₹4,500</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="reveal" style="border-bottom:none">
+  <div class="section-label">Offline Rollout Timeline</div>
+  <div class="section-title">When each offline action gets executed</div>
+  <div class="section-desc">Sequenced so brand materials are in place before any public-facing activation begins. Workshop boards must be up before the health camp runs.</div>
+  <div class="two-col-tl">
+    <div class="tl-block">
+      <ul class="offline-tl">
+        <li class="ot-item"><div class="ot-dot on"></div><div class="ot-month">Week 1 to 2</div><div class="ot-text">Workshop signboards, branded invoices, ID cards, and QR standees ordered and installed at all 3 workshops. Non-negotiable first step.</div></li>
+        <li class="ot-item"><div class="ot-dot on"></div><div class="ot-month">Week 3 to 4</div><div class="ot-text">First round of society pamphlet drops in all 3 zones. Petrol pump conversations initiated. Parts shop tie-up approach begins.</div></li>
+        <li class="ot-item"><div class="ot-dot mid"></div><div class="ot-month">Month 2</div><div class="ot-text">First free car health camp hosted at a housing society in Baner. Lead list collected and pushed into WhatsApp CRM within 24 hours.</div></li>
+        <li class="ot-item"><div class="ot-dot mid"></div><div class="ot-month">Month 3</div><div class="ot-text">Corporate outreach begins. First B2B meetings with IT park admin offices in Hinjewadi and Baner. Newspaper classified runs for first time.</div></li>
+      </ul>
+    </div>
+    <div class="tl-block">
+      <ul class="offline-tl">
+        <li class="ot-item"><div class="ot-dot"></div><div class="ot-month">Month 4 to 5</div><div class="ot-text">Mechanic referral network formalised. Cab and delivery fleet outreach active. Second and third health camps run in Aundh and Hadapsar.</div></li>
+        <li class="ot-item"><div class="ot-dot"></div><div class="ot-month">Month 6</div><div class="ot-text">First B2B fleet contract signed. Local event participation in Pune. Community WhatsApp presence in at least 5 societies.</div></li>
+        <li class="ot-item"><div class="ot-dot"></div><div class="ot-month">Month 8 to 9</div><div class="ot-text">Offline playbook documented as SOP for Panjim launch. All materials templated for rapid city replication. Panjim offline activation begins.</div></li>
+        <li class="ot-item"><div class="ot-dot"></div><div class="ot-month">Month 12</div><div class="ot-text">Offline generating 30 to 40% of total monthly leads. Brand visible in all Pune zones. Physical presence established in Panjim.</div></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+</div><!-- /wrapper -->
+
+<footer>
+  <div class="footer-brand">V Mechanic — Brand Growth Strategy 2026-2027</div>
+  <div class="footer-credit">Prepared by Pratik Bagale &nbsp;|&nbsp; Confidential</div>
+</footer>
+
+<script>
+const reveals = document.querySelectorAll('.reveal');
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if(e.isIntersecting){ e.target.classList.add('visible'); observer.unobserve(e.target); }
+  });
+}, {threshold: 0.08});
+reveals.forEach(r => observer.observe(r));
+</script>
+</body>
+</html>
